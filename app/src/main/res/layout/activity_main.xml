@@ -36,7 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
-        android:src="@drawable/ic_view"
+        android:src="@drawable/ic_views_24"
         app:layout_constraintTop_toBottomOf="@+id/barrier2"
         app:layout_constraintEnd_toStartOf="@+id/textview"
         android:layout_marginTop="16dp"
@@ -79,7 +79,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:background="@android:color/transparent"
-        android:src="@drawable/ic_like"
+        android:src="@drawable/ic_like_24"
         app:layout_constraintTop_toBottomOf="@+id/barrier2"
         android:layout_marginTop="16dp"/>
 
@@ -87,10 +87,10 @@
         android:id="@+id/lin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toEndOf="@+id/avatar"
-        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="@+id/published"
+        android:layout_marginStart="0dp"
         android:background="@android:color/transparent"
-        android:src="@drawable/ic_split_24"
+        android:src="@drawable/ic_share_24"
         app:layout_constraintTop_toBottomOf="@+id/barrier2"
         android:layout_marginTop="16dp"
         />
@@ -125,8 +125,9 @@
 
     <ImageView
         android:id="@+id/avatar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/post_avatar_drawable"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints"
