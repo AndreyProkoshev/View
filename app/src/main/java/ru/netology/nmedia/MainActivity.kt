@@ -21,18 +21,17 @@ class MainActivity : AppCompatActivity() {
             textview = 0,
             repostByMe = false,
             viewByMe = false,
-            repost = 29995,
-            countLike = 2095,
-            countview = 10995,
+            repost = 9999,
+            countLike = 9999,
+            countview = 9999,
             likedByMe = false)
         with(binding) {
             author.text = post.author
             published.text = post.published
             content.text = post.content
-            AccountLike.text = Calc.intToText(post.countLike)
-            rty.text = Calc.intToText(post.repost)
-            textview.text = Calc.intToText(post.countview)
-
+            AccountLike.text = formatNumber(post.countLike)
+            rty.text = formatNumber(post.repost)
+            textview.text = formatNumber(post.countview)
             root.setOnClickListener {
                 Log.d("ProkoshevAY", "root")
             }
@@ -47,15 +46,19 @@ class MainActivity : AppCompatActivity() {
                     post.countLike++
                 } else {
                     like.setImageResource(R.drawable.ic_like_24)
+                    post.countLike--
                 }
+                AccountLike.text = formatNumber(post.countLike)
             }
             lin.setOnClickListener {
                 post.repostByMe = !post.repostByMe
                 post.repost++
+                rty.text = formatNumber(post.repost)
             }
             view.setOnClickListener {
                 post.viewByMe = !post.viewByMe
                 post.countview++
+                textview.text = formatNumber(post.countview)
             }
         }
     }
